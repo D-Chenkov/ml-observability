@@ -1,0 +1,44 @@
+{
+  "dataset_drift": true,
+  "number_of_drifted_columns": 4,
+  "total_columns": 6,
+  "drift_share": 0.5,
+  "features": {
+    "MonthlyCharges": {
+      "type": "num",
+      "test": "Wasserstein distance (normed)",
+      "score": 1.1194730910833732,
+      "drift_detected": true
+    },
+    "TotalCharges": {
+      "type": "num",
+      "test": "Wasserstein distance (normed)",
+      "score": 0.035522790906203604,
+      "drift_detected": false
+    },
+    "tenure": {
+      "type": "num",
+      "test": "Wasserstein distance (normed)",
+      "score": 0.5191175399604977,
+      "drift_detected": true
+    },
+    "Contract": {
+      "type": "cat",
+      "test": "Jensen-Shannon distance",
+      "score": 0.2579680223837674,
+      "drift_detected": true
+    },
+    "InternetService": {
+      "type": "cat",
+      "test": "Jensen-Shannon distance",
+      "score": 0.01865268297028246,
+      "drift_detected": false
+    },
+    "PaymentMethod": {
+      "type": "cat",
+      "test": "Jensen-Shannon distance",
+      "score": 0.20027056308268873,
+      "drift_detected": true
+    }
+  }
+}
